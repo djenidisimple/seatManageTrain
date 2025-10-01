@@ -47,7 +47,7 @@ Pour compiler et exécuter ce projet, vous aurez besoin de :
 
 1.  **Cloner le dépôt :**
     ```bash
-    git clone [https://github.com/](https://github.com/)[VotreNom]/[NomDuRepo].git
+    git clone https://github.com/djenidisimple/seatManageTrain.git
     ```
 2.  **Ouvrir le projet :**
     Ouvrez le fichier `[NomDuFichier].sln` dans Visual Studio.
