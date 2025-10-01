@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="SeatManageTrain.NavigationButtons"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:SeatManageTrain"
+             xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             >
+    <StackPanel Orientation="Vertical" Background="White">
+        <Button Style="{StaticResource BtnNavBar}" Tag="Dashboard" Click="Button_Click">
+            <StackPanel>
+                <ContentControl Content="{iconPacks:Lucide Kind=House}" Width="16" Height="16"/>
+            </StackPanel>
+        </Button>
+        <Button Style="{StaticResource BtnNavBar}" Tag="Ticket" Click="Button_Click">
+            <StackPanel>
+                <ContentControl Content="{iconPacks:Lucide Kind=Ticket}" Width="16" Height="16"/>
+            </StackPanel>
+        </Button>
+        <Button Style="{StaticResource BtnNavBar}" Tag="Train" Click="Button_Click">
+            <StackPanel>
+                <ContentControl Content="{iconPacks:Lucide Kind=TramFront}" Width="16" Height="16"/>
+            </StackPanel>
+        </Button>
+        <Button Style="{StaticResource BtnNavBar}" Tag="Map" Click="Button_Click">
+            <StackPanel>
+                <ContentControl Content="{iconPacks:Lucide Kind=Map}" Width="16" Height="16"/>
+            </StackPanel>
+        </Button>
+        <Button Style="{StaticResource BtnNavBar}" Tag="Setting" Click="Button_Click">
+            <StackPanel>
+                <ContentControl Content="{iconPacks:Lucide Kind=Settings}" Width="16" Height="16"/>
+            </StackPanel>
+        </Button>
+    </StackPanel>
+</UserControl>

@@ -1,0 +1,87 @@
+﻿<UserControl x:Class="SeatManageTrain.TicketView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+             xmlns:local="clr-namespace:SeatManageTrain"
+             Background="#EFEDFF"
+             >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <WrapPanel Grid.Row="0" Orientation="Vertical" Margin="5, 0. 0. 0">
+                <TextBlock Text="Réservation" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <TextBlock Text="Filter par"/>
+            </WrapPanel>
+            <WrapPanel Grid.Row="1" Orientation="Horizontal">
+                <Border Style="{StaticResource TrainCardStyle}" Width="240" Height="260">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <!-- Ligne 1: Numéro du train -->
+                        <TextBlock Text="TGV-9246" FontSize="16" FontWeight="Bold" Foreground="#333333"
+                   Grid.Row="0" Grid.Column="0"/>
+                        <Border Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Height="90" Background="Gray" Margin="0, 12, 0, 30">
+                            
+                        </Border>
+                        
+                        <!-- Ligne 2: Horaires -->
+                        <StackPanel Grid.Row="2" Grid.Column="0" Margin="0,8,0,0">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Départ: " FontWeight="SemiBold" Foreground="#666666"/>
+                                <TextBlock Text="08:30" Foreground="#333333"/>
+                            </StackPanel>
+                        </StackPanel>
+                        <StackPanel Grid.Row="2" Grid.Column="1" Margin="0,8,0,0" HorizontalAlignment="Right">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Arrivée: " FontWeight="SemiBold" Foreground="#666666" Margin="0,0,0,0"/>
+                                <TextBlock Text="10:30" Foreground="#333333"/>
+                            </StackPanel>
+                        </StackPanel>
+
+                        <!-- Ligne 3: Sièges et Prix -->
+                        <StackPanel Grid.Row="3" Grid.Column="0" Margin="0,8,0,0">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Sièges Dispo : " FontWeight="SemiBold" Foreground="#666666"/>
+                                <TextBlock Text="150" Foreground="#4CAF50" FontWeight="SemiBold"/>
+                            </StackPanel>
+                        </StackPanel>
+                        <StackPanel Grid.Row="3" Grid.Column="1" Margin="0,8,0,0" HorizontalAlignment="Right">
+                            <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
+                                <TextBlock Text="Prix : " FontWeight="SemiBold" Foreground="#666666" Margin="0"/>
+                                <TextBlock Text="75€" Foreground="#FF5722" FontWeight="Bold" FontSize="14"/>
+                            </StackPanel>
+                        </StackPanel>
+
+                        <!-- Ligne 4: Trajet -->
+                        <StackPanel Grid.Row="4" Grid.Column="0" Margin="0,8,0,0">
+                            <TextBlock Text="Paris → Lyon" FontWeight="SemiBold" Foreground="#333333"/>
+                        </StackPanel>
+                        <StackPanel Grid.Row="4" Grid.Column="1" Margin="0,8,0,0" HorizontalAlignment="Right">
+                            <TextBlock Text="Paris - Lyon" Foreground="#666666" FontSize="12"/>
+                        </StackPanel>
+                    </Grid>
+                </Border>
+            </WrapPanel>
+        </Grid>
+    </Grid>
+</UserControl>
